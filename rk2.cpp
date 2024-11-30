@@ -8,10 +8,9 @@ void Insert_element(char a, size_t pos, char* &arr)
     size_t l = 0;
     while(arr[l] != '\0') ++l;
     char* b = new char[l + 1];
-    memcpy(b, arr, pos);
     b[pos] = a;
     memcpy(b + pos + 1, arr + pos, l - pos);
-    memcpy(arr, b, l + 1);
+    memcpy(arr + pos, b + pos, l + 1);
     delete[] b;
 }
 
