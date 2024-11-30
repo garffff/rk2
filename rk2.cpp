@@ -10,7 +10,7 @@ void Insert_element(char a, size_t pos, char* &arr)
     char* b = new char[l + 1];
     b[pos] = a;
     memcpy(b + pos + 1, arr + pos, l - pos);
-    memcpy(arr + pos, b + pos, l + 1);
+    memcpy(arr + pos, b + pos, l + 1); 
     delete[] b;
 }
 
